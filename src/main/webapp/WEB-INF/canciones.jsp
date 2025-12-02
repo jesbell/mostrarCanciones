@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+    <nav class="navbar">
+        <h2>Canciones</h2>
+        <a class="btn add-btn" href="/canciones/formulario/agregar">Agregar Canción</a>
+    </nav>
+
     <h1>Canciones</h1>
     <table>
         <thead>

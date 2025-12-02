@@ -1,8 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 40px;
     background-color: #f4f4f4;
     color: #333;
+}
+
+.navbar {
+    background-color: #1f3b4d;
+    color: #fff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.navbar h2 {
+    margin: 0;
+    color: #fff;
+}
+
+.navbar .add-btn {
+    background-color: #1f8ceb;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.navbar .add-btn:hover {
+    background-color: #106bb3;
 }
 
 /* titulos */
@@ -85,4 +118,57 @@ a:hover {
 
 .btn-secondary:hover {
     background-color: #5e6b6c;
+}
+
+/* Formulario */
+.form-container {
+    width: 420px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Campos form */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+}
+
+/* error */
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+/* btn principal */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1f8ceb;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #106bb3;
 }
