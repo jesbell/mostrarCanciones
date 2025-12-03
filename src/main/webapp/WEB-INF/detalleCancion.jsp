@@ -17,8 +17,9 @@
         <p>Album: ${cancion.album}</p>
         <p>Genero: ${cancion.genero}</p>
         <p>Idioma: ${cancion.idioma}</p>
-        <a class="btn" href="/canciones/formulario/editar/${cancion.id}">Editar Canción</a>
         <a class="btn btn-secondary" href="/canciones">Volver a canciones</a>
+        <a class="btn" href="/canciones/formulario/editar/${cancion.id}">Editar Canción</a>        
+        <a class="btn btn-danger" href="/canciones/eliminar/${cancion.id}" onclick="return confirm('¿Estás seguro de eliminar esta canción? Esta acción no se puede deshacer');">Eliminar Canción</a>
     </div>
     
     
