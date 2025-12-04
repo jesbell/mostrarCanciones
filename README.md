@@ -40,19 +40,41 @@ spring.jpa.hibernate.ddl-auto=update
 
 ## 🎼 Datos iniciales (opcional)
 
-Puedes poblar la base de datos con las siguientes canciones:
+Puedes poblar la base de datos con los siguientes artistas y  canciones:
+
+Artistas, Se crean con el id 1 en adelante
+```
+INSERT INTO artistas (nombre, apellido, biografia, fecha_creacion, fecha_actualizacion)
+VALUES
+('Ariana', 'Grande', 'Cantante y actriz estadounidense reconocida por su rango vocal.', NOW(), NOW()),
+('Freddie', 'Mercury', 'Legendario vocalista de Queen con una de las voces más icónicas del rock.', NOW(), NOW()),
+('Taehyung', 'Kim', 'V de BTS, cantante surcoreano con voz barítono y estilo artístico distintivo.', NOW(), NOW()),
+('Shakira', 'Ripoll', 'Cantautora colombiana que fusiona pop y ritmos latinos.', NOW(), NOW()),
+('Hikaru', 'Utada', 'Cantante japonesa-estadounidense, influyente en el J-pop.', NOW(), NOW());
+```
+
+Algunas canciones
 
 ```
-INSERT INTO canciones 
-(album, artista, fecha_actualizacion, fecha_creacion, genero, idioma, titulo)
+INSERT INTO canciones (titulo, artista_id, album, genero, idioma, fecha_creacion, fecha_actualizacion)
 VALUES
-("Mr Simple", "Super Junior", NOW(), NOW(), "Kpop", "Coreano", "Mr. Simple"), 
-("Wolf", "EXO", NOW(), NOW(), "Kpop", "Coreano", "XOXO"),
-("Fantôme", "Utada Hikaru", NOW(), NOW(), "Jpop", "Japonés", "Sakura Nagashi"),
-("Blue Blood", "X Japan", NOW(), NOW(), "Jrock", "Japonés", "Kurenai"),
-("Nanno Iro", "YOASOBI", NOW(), NOW(), "Jpop", "Japonés", "Yoru ni Kakeru"),
-("Kiss & Cry", "Perfume", NOW(), NOW(), "Jpop", "Japonés", "Flash"),
-("Zankyo Reference", "ONE OK ROCK", NOW(), NOW(), "Jrock", "Japonés", "The Beginning");
+('Into You', 1, 'Dangerous Woman', 'Pop', 'Inglés', NOW(), NOW()),
+('No Tears Left To Cry', 1, 'Sweetener', 'Pop', 'Inglés', NOW(), NOW()),
+('Positions', 1, 'Positions', 'Pop', 'Inglés', NOW(), NOW());
+
+
+INSERT INTO canciones (titulo, artista_id, album, genero, idioma, fecha_creacion, fecha_actualizacion)
+VALUES
+('Bohemian Rhapsody', 2, 'A Night at the Opera', 'Rock', 'Inglés', NOW(), NOW()),
+('We Are the Champions', 2, 'News of the World', 'Rock', 'Inglés', NOW(), NOW()),
+('Somebody to Love', 2, 'A Day at the Races', 'Rock', 'Inglés', NOW(), NOW());
+
+
+INSERT INTO canciones (titulo, artista_id, album, genero, idioma, fecha_creacion, fecha_actualizacion)
+VALUES
+('Flavor of Life', 5, 'Flavor of Life', 'J-pop', 'Japonés', NOW(), NOW()),
+('Automatic', 5, 'First Love', 'J-pop', 'Japonés', NOW(), NOW()),
+('First Love', 5, 'First Love', 'J-pop', 'Japonés', NOW(), NOW());;
 ```
 
 ## ▶️ Ejecutar el proyecto

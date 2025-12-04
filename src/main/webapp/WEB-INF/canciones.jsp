@@ -12,7 +12,11 @@
 <body>
     <nav class="navbar">
         <h2>Canciones</h2>
-        <a class="btn add-btn" href="/canciones/formulario/agregar">Agregar Canción</a>
+        <div class="nav-btns">
+            <a class="btn add-btn" href="/artistas">Ir a artistas</a>
+            <a class="btn add-btn" href="/canciones/formulario/agregar">Agregar Canción</a>
+        </div>
+        
     </nav>
 
     <h1>Canciones</h1>
@@ -28,7 +32,7 @@
             <c:forEach var="cancion" items="${listaCanciones}">
                 <tr>
                     <td>${cancion.titulo}</td>
-                    <td>${cancion.artista}</td>
+                    <td>${cancion.artista.nombre} ${cancion.artista.apellido}</td>
                     <td>
                         <a class="btn" href="/canciones/detalle/${cancion.id}">Ver Detalles</a>
                     </td>
@@ -36,5 +40,6 @@
             </c:forEach>
         </tbody>
     </table>
+    
 </body>
 </html>

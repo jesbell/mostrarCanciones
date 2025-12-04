@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +31,24 @@
 
         <div class="form-group">
             <label>Artista:</label>
-            <form:input path="artista" cssClass="input"/>
-            <form:errors path="artista" cssClass="error"/>
+            <select name="artistaId" class="input">
+                <option value="" disabled 
+                <c:if test="${empty param.artistaId}">selected</c:if>
+            >-- Selecciona un artista --</option>
+
+            <c:forEach var="artista" items="${listaArtistas}">
+                <option value="${artista.id}"
+                    <c:if test="${param.artistaId == artista.id}">selected</c:if>
+                >
+                    ${artista.nombre} ${artista.apellido}
+                </option>
+            </c:forEach>
+        </select>
+
+            <c:if test="${not empty errorArtista}">
+                <p class="error">${errorArtista}</p>
+            </c:if>
+
         </div>
 
         <div class="form-group">

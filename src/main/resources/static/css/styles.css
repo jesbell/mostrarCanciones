@@ -25,6 +25,12 @@ body {
     color: #fff;
 }
 
+.nav-btns {
+    margin-left: auto; 
+    display: flex;
+    gap: 10px; 
+}
+
 .navbar .add-btn {
     background-color: #1f8ceb;
     padding: 10px 20px;
